@@ -42,7 +42,7 @@ header {
     flex-direction: column;
     justify-content: center;
     width: 100%;
-    min-width: 320px;
+    min-width: 250px;
     height: 334px;
     text-align: center;
     background: linear-gradient(207.8deg, #201E1C 16.69%, #F7931A 100%);
@@ -78,8 +78,8 @@ header img {
     align-self: center;
 }
 .header--title-container {
-    width: 90%;
-    min-width: 280px;
+    width: 100%;
+    min-width: 250px;
     max-width: 900px;
     height: 218px;
     margin-top: 40px;
@@ -139,7 +139,7 @@ main {
 }
 .main-exchange-container--title {
     width: 90%;
-    min-width: 288px;
+    min-width: 258px;
     max-width: 900px;
     margin: 0 auto;
 }
@@ -168,16 +168,32 @@ main {
     height: 1.6rem;
     color: #757575;
 }
+.main-tables-container {
+    width: 100%;
+    height: 450px;
+    margin-bottom: 50px;
+}
 .main-currency-table {
+    display: flex; 
+    flex-direction: column;
     width: 70%;
     min-width: 235px;
     max-width: 500px;
     height: 360px;
     margin: 0 auto;
     font-family: "Inter", sans-serif;
-
 }
-.main-currency-table .currency-table--title {
+.main-currency-tableb {
+    display: flex; 
+    flex-direction: column;
+    width: 70%;
+    min-width: 235px;
+    max-width: 500px;
+    height: 360px;
+    margin: 0 auto;
+    font-family: "Inter", sans-serif;
+}
+.main-currency-table .currency-table--title, .currency-table--titleb {
     text-align: left;
     text-indent: 20px;
     margin-bottom: 15px;
@@ -186,7 +202,12 @@ main {
     line-height: 2.3rem;
     color: var(--bitcoin-orange);
 }
+.currency-table--titleb {
+    margin-top: 20px;
+    color: var(--secondary-blue);
+}
 .currency-table--container {
+    flex-direction: column;
     width: 90%;
     min-width: 230px;
     max-width: 300px;
@@ -244,23 +265,44 @@ main {
     background-size: cover;
 }
 .currency-table--date {
+    align-items: flex-end;
     width: 190px;
     height: 30px;
     margin: 0 auto;
     margin-top: 50px;
     padding: 8px;
     background-color: var(--soft-orange);
+    border-radius: 8px;
+}
+.currency-table--dateb{
+    /* position: relative; */
+    /* align-items: flex-end; */
+    width: 190px;
+    height: 30px;
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #E7F5FF;
+    border-radius: 8px;
 }
 .currency-table--date p {
     font-size: 1.2rem;
     font-weight: 300;
     line-height: 1.5rem;
     color: var(--warm-black);
+    border-radius: 10px;
+}
+.currency-table--dateb p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+    color: var(--warm-black);
+    border-radius: 10px;
 }
 .main-product-detail {
     position: relative;
     width: 100%;
-    min-width: 320px;
+    min-width: 250px;
     height: auto;
     padding: 20px 10px;
     background-color: var(--warm-black);
@@ -276,7 +318,7 @@ main {
 }
 .product-detail--title {
     width: 90%;
-    min-width: 288px;
+    min-width: 25px;
     height: auto;
     margin: 0 auto;
     margin-top: 50px;
@@ -297,8 +339,8 @@ main {
     color: #808080;
 }
 .product-detail--card {
-    width: 90%;
-    min-width: 288px;
+    width: 85%;
+    min-width: 250px;
     max-width: 400px;
     height: 150px;
     margin: 15px auto;
@@ -362,7 +404,7 @@ main {
 }
 .bitcoin-img--container {
     width: 100%;
-    min-width: 320px;
+    min-width: 250px;
     height: 50vh;
     background-image: url("./assets/images/bitcoinbaby2x.jpg");
     background-position: center;
@@ -379,13 +421,13 @@ main {
 }
 .main-plans--container{
     width: 100%;
-    min-width: 320px;
+    min-width: 250px;
     padding-bottom: 70px;
     text-align: center;
 }
 .plans--title {
     width: 90%;
-    min-width: 288px;
+    min-width: 250px;
     height: auto;
     margin: 0 auto;
     margin-bottom: 50px;
@@ -409,6 +451,7 @@ main {
     /*gap: 50px;  se puede usar para dar un espaciado entre tarjetas pero al ser experimental no lo soportan todos los navegadore y es preferible optar por un margin */
     height: 316px;
     overflow-x: scroll;
+    /* overflow-y: hidden; */
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
 }
@@ -416,10 +459,10 @@ main {
     position: relative;
     scroll-snap-align: center;
     width: 70%;
-    min-width: 190px;
+    min-width: 230px;
     max-width: 300px;
     height: 250px;
-    margin: 50px 5px 0;
+    margin: 50px 20px 0;
     padding: 0 15px;
     background-color: var(--just-white);
     border-radius: 15px;
