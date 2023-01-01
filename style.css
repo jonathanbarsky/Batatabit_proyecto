@@ -34,6 +34,7 @@
 html {
     font-size: 62.5%;
     font-family: "DM Sans", sans-serif;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -170,17 +171,19 @@ main {
 }
 .main-tables-container {
     width: 100%;
-    height: 450px;
+    display: flex;
+    height: auto;
     margin-bottom: 50px;
 }
 .main-currency-table {
-    display: flex; 
+    display: flex;
     flex-direction: column;
+    gap: 20px;
     width: 70%;
     min-width: 235px;
-    max-width: 500px;
-    height: 360px;
-    margin: 0 auto;
+    max-width: 70%;
+    height: auto;
+    margin: 10px auto 0 auto;
     font-family: "Inter", sans-serif;
 }
 .main-currency-tableb {
@@ -207,16 +210,17 @@ main {
     color: var(--secondary-blue);
 }
 .currency-table--container {
+    display: flex;
     flex-direction: column;
     width: 90%;
     min-width: 230px;
     max-width: 300px;
-    height: 250px;
+    height: auto;
     margin: 0 auto;
 }
 .currency-table--container table {
     width: 100%;
-    height: 100%;
+    height: 180px;
 }
 .currency-table--container td {
     width: 50%;
@@ -265,18 +269,14 @@ main {
     background-size: cover;
 }
 .currency-table--date {
-    align-items: flex-end;
     width: 190px;
     height: 30px;
-    margin: 0 auto;
-    margin-top: 50px;
+    margin: 10px auto 0 auto;
     padding: 8px;
     background-color: var(--soft-orange);
     border-radius: 8px;
 }
 .currency-table--dateb{
-    /* position: relative; */
-    /* align-items: flex-end; */
     width: 190px;
     height: 30px;
     margin: 0 auto;
@@ -304,7 +304,7 @@ main {
     width: 100%;
     min-width: 250px;
     height: auto;
-    padding: 20px 10px;
+    padding: 20px 10px 50px 10px;
     background-color: var(--warm-black);
 }
 
@@ -448,10 +448,9 @@ main {
 }
 .plans-container--slider {
     display: flex;
-    /*gap: 50px;  se puede usar para dar un espaciado entre tarjetas pero al ser experimental no lo soportan todos los navegadore y es preferible optar por un margin */
     height: 316px;
     overflow-x: scroll;
-    /* overflow-y: hidden; */
+    overflow-y: hidden;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
 }
