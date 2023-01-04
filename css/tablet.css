@@ -22,3 +22,12 @@
 .plans-container--slider {
     justify-content: center;
 }
+.plans-container--card{
+    transition: 0.7s all 0s linear;
+    transform: scale(1) ;
+}
+.plans-container--card:hover{
+    cursor: pointer;
+    transition: 0.35s transform 0s linear ;
+    transform: scale(1.1) ;
+}

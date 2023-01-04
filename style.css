@@ -36,6 +36,9 @@ html {
     font-family: "DM Sans", sans-serif;
     scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+}
 
 header {
     position: relative;
@@ -118,6 +121,9 @@ header img {
     font-weight: bold;
     text-decoration: none;
     color: var(--black);
+}
+.header--button{
+    opacity: 0;
 }
 .header--button span {
     display: inline-block;
@@ -481,6 +487,7 @@ main {
     border-radius: 15px;
     box-shadow: 0 6px 10px rgba( 89, 73, 30, 0.46);
 }
+
 /* @keyframes carousel{
     from{
         transform: rotateY(0deg);
@@ -599,4 +606,37 @@ footer .left ul {
 .left a {
     text-decoration: none;
     color: var(--just-white);
+}
+.container-card > .ejeX{
+    opacity: 0;
+    transform: translateX(-40vw);
+}
+.container-card > .ejeX:nth-child(even){
+    opacity: 0;
+    transform: translateX(40vw);
+}
+.invisible{
+    opacity: 0;
+}
+.appear{
+    animation: 2s opacity 0s ease-in-out forwards;
+}
+.appearanceToCenter{
+    animation: 2s toCenter 0s ease-in-out forwards;
+}
+@keyframes opacity {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+@keyframes toCenter{
+    0%{
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
